@@ -1,0 +1,108 @@
+<html>
+
+<title>Asteroids</title>
+
+<!-- JS -->
+<script src='scripts/jquery.min.js'></script>
+<script src='scripts/page.js'></script>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="style/index.css">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+<!-- HTML -->
+<body>
+  <div class='outer-container'>
+      <div class='game-window'>
+        
+        <!-- Main Menu -->
+
+        <div id="landing-page">
+          <div id="landing-header">
+            <img src="./src/asteroid.png" align="right" width="90" height="90">
+            Asteroids
+            <img src="./src/asteroid.png" align="left" width="90" height="90">
+          </div>
+          <div class="button-div">
+            <button class="lp-button" onclick="play_game()" id='play_game'>Play Game!</button>
+          </div> 
+          <div class="button-div">
+            <button class="lp-button" onclick="setting_click()" id='sett'>Settings</button>
+          </div>
+          <div id='game-over'>
+            <div class='go-txt'><b>GAME OVER!</b></div>
+            <div class='go-txt'>YOU HAVE TO FIX YOUR SPACESHIP!</div>
+            <div id='final-score' class='go-txt'></div>
+            <button id='srt-ovr' onclick="hideGO()">Start Over</button>
+          </div>
+        </div>
+        <!-- Settings -->
+        <div  class="button-div">
+          <div id="Settings">
+            <b>Settings</b>
+            <div class="slidecontainer">
+              <p><b>Volume:</b> <span id="demo">50</span></p>
+              <input type="range" min="1" max="100" value="50" class="slider" id="myRange" oninput="vol(this.value)">
+            </div>
+            <div id="dif_select">
+              <b>Difficulty</b>
+              <div id='levels'>
+                <button id="easy" class="lvl-select" onclick="easy_click()">Easy</button>
+                <button id="normal" class="lvl-select" onclick="normal_click()">Normal</button>
+                <button id="hard" class="lvl-select" onclick="hard_click()">Hard</button>
+              </div>
+              <button onclick="close_settings()" class="lvl-select" style="margin-top:100">Close</button>
+            </div>
+          </div>
+          <!-- put this into JS later -->
+          <!-- <script>   
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            }
+            </script> -->
+        </div>
+        <!-- Tutorial -->
+        <div id="tutorial">
+          <h1 class='htp'>How to play</h1>
+          <div class='ttext'><b>Avoid</b><em> asteroids!</em></div>
+          <img class="tut_img" src='./src/asteroid.png'>
+          <div class='ttext'><b>Collect </b><em>shields! </em><b>Travel </b>through <em>portals</em> to the next level!</div>
+          <img class="tut_img" src="./src/shield.gif" alt="shield">
+          <img class="tut_img" src="./src/port.gif" alt="portal">
+          <div class='ttext'><b>Gain </b>as many <em>points </em>as possible!</div>
+          <button id="tut_start" onclick="show_game()">Start</button>
+        </div>
+        <!-- Actual Game -->
+        <div id="actual_game">
+          <div class="asteroidSection">
+            <div id='player'>
+              <img src='./src/player/player.gif' id='r_img'>
+            </div>
+              <div class="curAstroid"> </div>
+                <img src="./src/port.gif" class="currPortal">
+                <img src='./src/shield.gif' class="currShield">
+          </div>
+          <div id="game_right_section">
+              <div id="scoreword">
+                  SCORE
+                  <div id="score_num">0</div>
+              </div>
+              <div id="danger">DANGER
+              <div id="danger_num"></div></div>
+              <div id="level">LEVEL
+              <div id="level_num"></div></div>
+          </div>
+          <div id="splash">
+            <div class='htp'><b>Get Ready!</b></div>
+            <img src='./src/arrowkeys.png' class='tut-img'>
+            <div class='ttext'>Use arrow keys to move.</div>
+          </div>
+        </div> 
+      </div> <!-- end game-window -->
+  </div> <!-- end outer-container -->
+</body>
+
+</html>

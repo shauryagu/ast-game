@@ -1,0 +1,289 @@
+/* Main Containers */
+body, button {
+  font-family: VT323;
+}
+button {
+  font-size: xx-large;
+}
+
+.outer-container {
+  height: 720px;
+  width: 1280px;
+  background: #eee;
+  border: 5px solid gainsboro;
+}
+
+.game-window {
+  height: 720px;
+  width: 1280px;
+  float: left;
+  position: relative;
+}
+  
+/* Game Section --- Right Section */
+
+#actual_game{
+    display:none;
+    height: 720px;
+    width: 1280px;
+    background-color: white;
+    z-index: 10;
+    right: 0px;
+    top: 0px;
+
+}
+
+#game_right_section {
+    height: 600px;
+    width: 320px;
+    position: absolute;
+    left: 960px;
+    top: 0px;
+    color: black;
+    z-index: 1;
+}
+
+#scoreword, #danger, #level {
+  text-align:center;
+  font-size: 60px;
+}
+
+#score_num, #danger_num, #level_num {
+  text-align: center;
+  font-size: 40px;
+  color: darkblue;
+}
+
+#player {
+  position: absolute;
+  width: 62px;
+  left: 600px;
+  top: 300px;
+  z-index: 10;
+}
+
+.curAstroid {
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  z-index: 9;
+  right: 0px;
+  top: 0px;
+}
+
+.curAstroid img{
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  left: -17px;
+  top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Add your styling here */
+.currPortal {
+  position: relative;
+  display: none;
+  height: 100px;
+  width: 100px;
+  left: 0px;
+  top: 0px;
+}
+
+.currShield {
+  position: relative;
+  display: none;
+  height: 100px;
+  width: 100px;
+  left:0px;
+  top:0px;
+}
+
+#landing-header {
+  background-color: darkslateblue;
+  width: auto;
+  height: 100px;
+  font-size: 100px;
+  border-bottom: 6px;
+  border-bottom-style: groove;
+  color: white;
+  text-align: center;
+}
+
+#landing-page{
+  position: fixed;
+  background-image: url("../src/frontpage_background.jpg");
+  width:inherit;
+  height: inherit;
+  z-index: 10;
+}
+
+#Settings {
+  display: none;
+  z-index: 15;
+  height: 690;
+  width: 600;
+  background-color: darkslateblue;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  border: 3px;
+  border-style: groove;
+  font-size: 50px;
+}
+
+.lp-button {
+  margin-top: 75px;
+  height: 100px;
+  width: 200px;
+  background-color: darkslateblue;
+  color: white;
+  font-size: 40px;
+}
+
+.button-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slidecontainer {
+  position: relative;
+  margin: auto;
+  top: 20px;
+  width: 80%;
+  z-index: 20;
+}
+
+.slider {
+  position:inherit;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+#dif_select {
+  margin-top: 70px;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.lvl-select {
+  margin-right: 1px;
+  margin-left: 1px;
+  margin-top: 20px;
+  height: 100px;
+  width: 180px;
+  background-color: purple;
+  color: white;
+  opacity: .7;
+  transition: opacity .2s;
+  border: 4px;
+  border-style: groove;
+}
+
+.lvl-select:hover{
+  opacity: 1;
+}
+
+.lvl-selected {
+  border-color:yellow;
+  opacity: 1;
+}
+
+#tutorial {
+  display:none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: gainsboro;
+  font-size: 50px;
+  height: 720px;
+  width: 1280px;
+  z-index: 8;
+}
+
+.tut_img{
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+#r_img {
+  height: 100px;
+  width: 100px;
+}
+
+.htp {
+  position:relative;
+  font-size: 75px;
+}
+
+.ttext {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+#tut_start {
+  height: 75px;
+  width: 200px;
+}
+
+#splash {
+  display: inherit;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 50px;
+  top: 30%;
+  z-index: 11;
+}
+
+#game-over {
+  display:none;
+  position: relative;
+  height: 200;
+  width: 600;
+  margin: auto;
+  top: 150;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  background-color: darkslateblue;
+}
+
+.go-txt {
+  margin-top:10px;
+  margin-bottom: 15px;
+}
